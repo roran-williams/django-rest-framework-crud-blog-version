@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'django_filters',
     'authentication',
     'blogs',
+    'corsheaders',
 ]
 
 
@@ -70,6 +71,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://stunning-waffle-7qgw6q65q7w2p575-3000.app.github.dev",
+    # Add other allowed origins as needed
 ]
 
 ROOT_URLCONF = 'api_crud.urls'

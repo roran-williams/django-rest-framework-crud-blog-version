@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'blogs',
 ]
 
+
 SITE_ID = 1
 
 MIDDLEWARE = [

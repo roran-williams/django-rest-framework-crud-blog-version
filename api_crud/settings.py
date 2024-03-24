@@ -81,6 +81,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://scrftc-8000.csb.app",
     "https://stunning-waffle-7qgw6q65q7w2p575-3000.app.github.dev",
     "http://localhost:3000",
+    "https://f9lhnr-3000.csb.app",
 
     # Add other allowed origins as needed
 ]

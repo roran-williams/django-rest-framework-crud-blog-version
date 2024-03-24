@@ -45,6 +45,7 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=6000),
     # Set the expiration time for refresh tokens
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+
 }
 
 # Application definition

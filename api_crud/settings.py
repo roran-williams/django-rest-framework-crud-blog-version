@@ -77,6 +77,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://stunning-waffle-7qgw6q65q7w2p575-3000.app.github.dev",
+    "http://localhost:3000"
     # Add other allowed origins as needed
 ]
 

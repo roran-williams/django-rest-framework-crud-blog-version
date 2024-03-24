@@ -38,9 +38,10 @@ REST_FRAMEWORK = {
         'django_filters.rest_framework.DjangoFilterBackend',
     ),
 }
+APPEND_SLASH = False
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # Set the expiration time for access tokens
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=6000),  # Set the expiration time for access tokens
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),     # Set the expiration time for refresh tokens
 }
 

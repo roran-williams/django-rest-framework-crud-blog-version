@@ -27,7 +27,7 @@ SECRET_KEY = 'ftov1!91yf@7f7&g2%*@0_e^)ac&f&9jeloc@#v76#^b1dhbl#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["scrftc-8000.csb.app"]
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 REST_FRAMEWORK = {
@@ -41,8 +41,11 @@ REST_FRAMEWORK = {
 APPEND_SLASH = False
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=6000),  # Set the expiration time for access tokens
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),     # Set the expiration time for refresh tokens
+    # Set the expiration time for access tokens
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=6000),
+    # Set the expiration time for refresh tokens
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+
 }
 
 # Application definition
@@ -76,10 +79,14 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    "https://scrftc-8000.csb.app",
     "https://stunning-waffle-7qgw6q65q7w2p575-3000.app.github.dev",
+    "http://localhost:3000",
+
     # Add other allowed origins as needed
 ]
-
+CSRF_TRUSTED_ORIGINS = ["https://scrftc-8000.csb.app"]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ROOT_URLCONF = 'api_crud.urls'
 
 TEMPLATES = [
